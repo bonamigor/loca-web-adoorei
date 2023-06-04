@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import ButtonComponent from './components/ButtonComponent.vue';
-import InputComponent from './components/InputComponent.vue';
+import { useRouter } from 'vue-router';
+import ButtonComponent from '../components/ButtonComponent.vue';
+import InputComponent from '../components/InputComponent.vue';
 
 
 const transition = ref(true)
 const router = useRouter()
-const route = useRoute()
 
 const handleLogin = () => {
   router.push({ name: 'Home' })
@@ -16,8 +15,7 @@ const handleLogin = () => {
 </script>
 
 <template>
-  <router-view />
-  <main v-if="route.path === '/'" class="flex flex-col items-center justify-center w-auto h-screen m-10 font-sora">
+  <main  class="flex flex-col items-center justify-center w-auto h-screen m-10 font-sora">
     <figure>
       <img src="./assets/locaweb-logo.png" alt="locaweb logo" />
     </figure>
