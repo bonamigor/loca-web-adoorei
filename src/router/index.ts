@@ -1,7 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 
 const Index = () => import('../App.vue')
 const Home = () => import('../views/Home.vue')
+const SelectPlan = () => import('../views/SelectPlan.vue')
+const Cadastro = () => import('../views/Cadastro.vue')
 
 const routes = [
   {
@@ -13,6 +15,16 @@ const routes = [
     path: '/inicial',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/selecionar-plano',
+    name: 'SelectPlan',
+    component: SelectPlan
+  },
+  {
+    path: '/cadastro',
+    name: 'Cadastro',
+    component: Cadastro,
   }
 ]
 
