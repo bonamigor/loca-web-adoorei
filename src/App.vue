@@ -49,7 +49,7 @@ const handleLogin = () => {
       </form>
     </section>
     <footer class="flex flex-col items-center justify-center">
-      <span class="text-xs md:text-sm">Ainda não tem conta? <a href="/selecionar-plano" class="underline text-rosa-choque hover:text-[#292D32]">Cadastre-se</a></span>
+      <span class="text-xs md:text-sm">Ainda não tem conta? <a href="/selecionar" class="underline text-rosa-choque hover:text-[#292D32]">Cadastre-se</a></span>
     </footer>
   </main>
   

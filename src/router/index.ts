@@ -17,7 +17,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/selecionar-plano',
+    path: '/selecionar',
     name: 'SelectPlan',
     component: SelectPlan
   },
