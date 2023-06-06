@@ -1,26 +1,11 @@
-import { createStore } from 'vuex'
+import { defineStore } from 'pinia'
+import { Plan } from '../components/Plans.vue'
 
-export default createStore({
-  state: {
-    plan: {},
-  },
-  getters: {
-    getPlan: state => {
-      return state.plan
-    }
-  },
-  mutations: {
-    SET_PLAN (state, plan) {
-      state.plan = plan
+export const usePlansStore = defineStore('plans', {
+  state: () => ({ plan: {} as Plan }),
+  actions: {
+    setPlan(plan: Plan) {
+      this.plan = plan
     },
   },
-  actions: {
-    async setPlan ({ commit }, payload) {
-      try {
-        commit('SET_PLAN', payload)
-      } catch (error) {
-        console.log('Erro no Store - setPlan', error)
-      }
-    }
-  }
 })

@@ -82,7 +82,7 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
-import planStore from '../store/plan';
+import { usePlansStore } from '../store/plan';
 import ButtonComponent from './ButtonComponent.vue';
 
 export interface Plan {
@@ -199,9 +199,10 @@ interface PlanProps {
 defineProps<PlanProps>()
 
 const router = useRouter()
+const store = usePlansStore()
 
 const handlePlanSelection = (plan: Plan) => {
-  planStore.dispatch('setPlan', plan)
+  store.setPlan(plan)
   router.push({ name: 'Cadastro' })
 }
 </script>

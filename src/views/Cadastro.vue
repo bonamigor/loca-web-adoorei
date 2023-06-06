@@ -35,17 +35,17 @@ import InputComponent from '../components/InputComponent.vue';
 import PlanComponent from '../components/Plan.vue';
 import { Plan } from '../components/Plans.vue';
 import router from '../router';
-import planStore from '../store/plan';
+import { usePlansStore } from '../store/plan';
 
 interface CadastroProps {
   plan: Plan;
 }
 
-withDefaults(defineProps<CadastroProps>(), {
-  plan: planStore.state.plan
-})
+const store = usePlansStore()
 
-const plan = reactive(planStore.state.plan)
+defineProps<CadastroProps>()
+
+const plan = reactive(store.plan)
 const user = reactive({
   name: '',
   phone: '',
