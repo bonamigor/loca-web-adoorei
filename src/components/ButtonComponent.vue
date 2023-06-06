@@ -2,7 +2,7 @@
 interface ButtonProps {
   type: 'submit' | 'reset' | 'button';
   label: string;
-  transition: boolean;
+  transition?: boolean;
 }
 
 defineProps<ButtonProps>()
